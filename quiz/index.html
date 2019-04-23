@@ -1,0 +1,131 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!-- top section -->
+    <div class="intro py-3 bg-white text-center">
+      <div class="container">
+        <h2 class="text-primary display-3 my-4">Quiz</h2>
+      </div>
+    </div>
+
+    <!-- results -->
+    <div class="result py-4 d-none bg-light text-center">
+      <div class="container lead">
+        <p>
+          You are <span class="text-primary display-4 p-3">0%</span> correct!
+        </p>
+      </div>
+    </div>
+
+    <!-- quiz -->
+    <div class="quiz py-4 bg-primary">
+      <div class="container">
+        <h2 class="my-5 text-white">u rly know me ?</h2>
+
+        <form class="quiz-form text-light">
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              1. What is my Favorite Color?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="A" checked />
+              <label class="form-check-label">Maroon</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="B" checked />
+              <label class="form-check-label">Crimson</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="C" checked />
+              <label class="form-check-label">Grey</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="D" checked />
+              <label class="form-check-label">Red</label>
+            </div>
+          </div>
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              2. What is my Favorite Food?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="A" checked />
+              <label class="form-check-label">Mac n Cheese</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="B" checked />
+              <label class="form-check-label">Beef</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="C" checked />
+              <label class="form-check-label">Pizza</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="D" checked />
+              <label class="form-check-label">All of the Above</label>
+            </div>
+          </div>
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              1. What is my Favorite Show right now?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="A" checked />
+              <label class="form-check-label">Vampire Diaries</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="B" checked />
+              <label class="form-check-label">GOT</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="C" checked />
+              <label class="form-check-label">Lost</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="D" checked />
+              <label class="form-check-label">Breaking Bad</label>
+            </div>
+          </div>
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              1. What the sport I always say I love to watch?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="A" checked />
+              <label class="form-check-label">Football</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="B" checked />
+              <label class="form-check-label">Basketball</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="C" checked />
+              <label class="form-check-label">Hockey</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="D" checked />
+              <label class="form-check-label">Baseball</label>
+            </div>
+          </div>
+          <!-- button -->
+          <div class="text-center">
+            <input type="submit" class="btn btn-light" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
