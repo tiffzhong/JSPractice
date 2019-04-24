@@ -23,24 +23,3 @@ getTodos("https://jsonplaceholder.typicode.com/todos/")
   .catch(error => {
     console.log(error);
   });
-// const getSomething = () => {
-//   return new Promise((resolve, reject) => {
-//     // resolve("data");
-//     reject("error");
-//   });
-// };
-// getSomething()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
-// getTodos((err, data) => {
-//   console.log("callback fired");
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(data);
-//   }
-// });
