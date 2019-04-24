@@ -14,3 +14,8 @@ console.log("getTime", new Date().getTime()); //number of milliseconds since jan
 //date strings
 console.log("toDateString", new Date().toDateString());
 console.log("toDateString", new Date().toTimeString());
+
+//using DNS to format
+const now = new Date();
+const before = new Date("February 5 2019 12:00:00");
+console.log(dateFns.distanceInWords(now, before, { addSuffix: true })); //3 months ago
