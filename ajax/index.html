@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AJAX Practice</title>
+  </head>
+  <body>
+    <button id="button">get text file</button><br /><br />
+    <div id="text"></div>
+    <script>
+      document.getElementById("button").addEventListener("click", loadText);
+
+      function loadText() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("text").innerHTML = xhr.responseText;
+          } else if (xhr.readyState === 4) {
+            document.getElementById("text").innerHTML = "error";
+          }
+        });
+
+        xhr.open("GET", "sample.txt");
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

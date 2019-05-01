@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AJAX 2</title>
+  </head>
+  <body>
+    <button id="button1">get user</button>
+    <button id="button2">get users</button><br /><br />
+    <h1>User</h1>
+    <div id="user"></div>
+    <h1>Users</h1>
+    <div id="users"></div>
+    <script>
+      document.getElementById("button1").addEventListener("click", loadUser);
+      document.getElementById("button2").addEventListener("click", loadUsers);
+      function loadUser() {
+        let xhr = new XMLHttpRequest();
+        xhr.addEventListener("readystatechange", () => {
+          console.log(xhr);
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            let data = JSON.parse(xhr.responseText);
+            document.getElementById("user").innerHTML = `<ul><li> ${
+              data[0].name
+            } </li><li>${data[0].age}</li></ul>`;
+          } else {
+            document.getElementById("user").innerHTML = "error";
+          }
+        });
+        xhr.open("GET", "user.json");
+        xhr.send();
+      }
+      function loadUsers() {
+        let xhr2 = new XMLHttpRequest();
+        xhr2.addEventListener("readystatechange", () => {
+          let users = JSON.parse(xhr2.responseText);
+          let output = "";
+          for (let i in users) {
+            output += `<ul> <li> ${users[i].chaining} </li></ul>`;
+          }
+          if (xhr2.readyState === 4 && xhr2.status === 200) {
+            document.getElementById("users").innerHTML = output;
+          } else {
+            document.getElementById("users").innerHTML = "error";
+          }
+        });
+        xhr2.open("GET", "users.json");
+        xhr2.send();
+      }
+    </script>
+  </body>
+</html>
