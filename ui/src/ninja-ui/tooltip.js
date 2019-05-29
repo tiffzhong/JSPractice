@@ -1,8 +1,8 @@
-import "./tooltip.css";
+import "./styles/tooltip.css";
 class Tooltip {
   constructor(element) {
-    (this.element = element),
-      (this.message = element.getAttribute("data-message"));
+    this.element = element;
+    this.message = element.getAttribute("data-message");
   }
   init() {
     const tip = document.createElement("div");
